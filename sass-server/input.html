@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic Styles Test (EXAMPLE)</title>
+        <style>
+            textarea{
+                width: 300px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="css-request">
+            <label>Please enter the File Name of the CSS.</label> <br/>
+            <input type="text" id="filename" /><br/>
+            <label>Please enter the name of the Collection.</label> <br/>
+            <input type="text" id="collection" /><br/>
+            <lable>Insert SASS</lable><br/>
+            <textarea id="raw"></textarea><br/>
+            <input type="submit" value="Test"/>
+        </form>
+        <script>
+            document.getElementById('css-request').addEventListener('submit', async ( e ) => {
+                e.preventDefault();
+                let rawCss = {
+                    filename: document.getElementById('filename').value,
+                    collection: document.getElementById('collection').value,
+                    css: document.getElementById('raw').value.replace(/\n/g, ""),
+                    mode: 1,
+                    compiler: 'sass',
+                };
+                const response = await fetch("http://localhost:3009/store", {
+                                method: "POST",
+                                mode: "cors", 
+                                cache: "no-cache",
+                                credentials: "same-origin", 
+                                headers: {
+                                    "Content-Type": "application/json",
+                                },
+                                redirect: "follow", 
+                                body: JSON.stringify(rawCss),
+                            })                
+            })
+        </script>
+    </body>
+</html>

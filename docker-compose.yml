@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  mongodb:
+    build:
+      context: .
+      
+      dockerfile: mongo-db.dockerfile
+    restart: no
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  nodejs_app:
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    volumes:
+      - ./sass:/app/sass-server/sass
+
+    restart: no
+    ports:
+      - "3011:3011"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/sass_db
+      
+volumes:
+  mongodb_data:
+
