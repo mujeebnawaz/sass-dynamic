@@ -1,6 +1,6 @@
 ## Overview
 
-Most modern Web Applications uses Cascading Style Sheet (CSS) pre-processors such as [SASS](https://sass-lang.com/documentation/) or syntax transformation tools like [PostCSS](https://postcss.org/docs/postcss-architecture) to make the large stylesheets more managable and efficent. 
+Most of the modern Web Applications uses Cascading Style Sheet (CSS) pre-processors such as [SASS](https://sass-lang.com/documentation/) or syntax transformation tools like [PostCSS](https://postcss.org/docs/postcss-architecture) to make the large stylesheets more managable and efficent. 
 
 Development environments these days are usually equipped with bundlers like [Webpack](https://webpack.js.org/loaders/css-loader/) which essentially keeps compiling the javascript and CSS in the background. 
 
