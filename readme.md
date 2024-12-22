@@ -8,7 +8,7 @@ Development environments these days are usually equipped with bundlers like [Web
 
 2. Bundled files comes with alot of unused CSS i.e., a bundle of css might contain styles of another page. 
 
-This package attempts to implement a naive solution to allow for on the fly compilation of styles and to make the styles delivery more efficent by producing only the styles which are required for a given page. 
+This package attempts to implement a naive solution to allow for on the fly compilation of styles and to make the styles delivery efficent by producing only the styles which are required for a given page. 
 
 
 ## Requirements
