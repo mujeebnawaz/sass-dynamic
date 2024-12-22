@@ -60,7 +60,7 @@ sass-examples
 scripts
 ```
 
-Running the script with the as follows will store all the files except footer.scss in ```newcollection``` named collection.
+Running the script as follows will store all the files except footer.scss in ```newcollection``` named collection.
 
 ```bash
 ./scritps/scss-store -d ../sass-examples -e footer.scss -c newcollection
